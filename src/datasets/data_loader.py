@@ -106,7 +106,7 @@ def get_datasets(dataset, path, num_tasks, nc_first_task, validation, trn_transf
         Dataset = memd.MemoryDataset
 
     elif 'cifar100_ltio' in dataset:
-        # tvcifar_trn = TorchVisionCIFAR100(path, train=True, download=True)
+        # This is the ordered long-tailed scenario
         tvcifar_trn = IMBALANCECIFAR100(path, train=True, download=True)
         tvcifar_tst = TorchVisionCIFAR100(path, train=False, download=True)
         trn_data = {'x': tvcifar_trn.data, 'y': tvcifar_trn.targets}
@@ -119,7 +119,7 @@ def get_datasets(dataset, path, num_tasks, nc_first_task, validation, trn_transf
         Dataset = memd.MemoryDataset
 
     elif 'cifar100_lt' in dataset:
-        # tvcifar_trn = TorchVisionCIFAR100(path, train=True, download=True)
+        # This is the shuffled long-tailed scenario
         tvcifar_trn = IMBALANCECIFAR100(path, train=True, download=True)
         tvcifar_tst = TorchVisionCIFAR100(path, train=False, download=True)
         trn_data = {'x': tvcifar_trn.data, 'y': tvcifar_trn.targets}
@@ -133,7 +133,6 @@ def get_datasets(dataset, path, num_tasks, nc_first_task, validation, trn_transf
 
     elif 'cifar100' in dataset:
         tvcifar_trn = TorchVisionCIFAR100(path, train=True, download=True)
-        # tvcifar_trn = IMBALANCECIFAR100(path, train=True, download=True)
         tvcifar_tst = TorchVisionCIFAR100(path, train=False, download=True)
         trn_data = {'x': tvcifar_trn.data, 'y': tvcifar_trn.targets}
         tst_data = {'x': tvcifar_tst.data, 'y': tvcifar_tst.targets}

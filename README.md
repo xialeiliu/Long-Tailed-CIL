@@ -45,13 +45,19 @@ Train a model of LUCIR with 2stage method by:
 bash ./script_cifar100_no_gradsearch.sh lucir_2stage 0 cifar100 conv 50 11
 ```
 
-Train a model of LUCIR with 2stage method on long-tailed scenario by:
+Train a model of LUCIR with 2stage method on shuffled long-tailed scenario by:
 
 ```
 bash ./script_cifar100_no_gradsearch.sh lucir_2stage 0 cifar100 lt 50 11
 ```
 
-Up to now, we implement 2stage methods to three methods (EEIL, LUCIR, PODNET). You can alse use other methods implemented in `./src/approaches`.
+Train a model of LUCIR with 2stage method on ordered long-tailed scenario by:
+
+```
+bash ./script_cifar100_no_gradsearch.sh lucir_2stage 0 cifar100 ltio 50 11
+```
+
+Up to now, we implement 2stage methods to three methods (EEIL, LUCIR, PODNET). You can alse use other methods implemented in `./src/approaches`. Scenarios are generated in `./src/datasets/dataloader`
 
 ## Reference
 
@@ -75,8 +81,5 @@ If you have any questions about this work, please feel free to contact us (xiale
 
 This code is based on [FACIL](https://github.com/mmasana/FACIL)
 
-## License
-
-Please check the MIT license that is listed in this repository.
 
 
