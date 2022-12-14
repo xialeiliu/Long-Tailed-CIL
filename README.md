@@ -2,19 +2,18 @@
 <!-- ## News
 ___ -->
 ## [ECCV2022]Long-Tailed Class Incremental Learning
----
 
 This is the official PyTorch implementation of **Long-Tailed Class Incremental Learning**([arxiv](https://arxiv.org/abs/2210.00266)).
 
 ## Dataset Prepare
----
+
 ### Cifar100
 Download automaticly to `./data`.
 ### Imagenet
 Should be downloaded to `./data`.
 
 ## Training
----
+
 Scripts for the main experiments are provided. Their main usage is as follows: 
 
 ```
@@ -32,7 +31,7 @@ where:
 * `[<results_dir>]` - results directory (optional), by default it will be `./results`
 
 ## Demos
----
+
 
 You can train a baseline model of LUCIR by:
 
@@ -55,7 +54,7 @@ bash ./script_cifar100_no_gradsearch.sh lucir_2stage 0 cifar100 lt 50 11
 Up to now, we implement 2stage methods to three methods (EEIL, LUCIR, PODNET). You can alse use other methods implemented in `./src/approaches`.
 
 ## Reference
----
+
 If this work is useful for you, please cite us by:
 ```
 @inproceedings{liu2022long,
@@ -69,15 +68,15 @@ If this work is useful for you, please cite us by:
 ```
 
 ## Contact
----
+
 If you have any questions about this work, please feel free to contact us (xialei AT nankai DOT edu DOT cn or ethanhu AT mail DOT nankai DOT edu DOT cn)
 
 ## Thanks
----
+
 This code is based on [FACIL](https://github.com/mmasana/FACIL)
 
 ## License
----
+
 Please check the MIT license that is listed in this repository.
 
 
