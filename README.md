@@ -17,7 +17,7 @@ Should be downloaded to `./data`.
 Scripts for the main experiments are provided. Their main usage is as follows: 
 
 ```
-bash ./script_cifar100_no_gradsearch.sh <approach> <gpu> <datasets> <scenario> <cls_num_first_task> <num_tasks> [<results_dir>]
+bash ./script_cifar100_no_gridsearch.sh <approach> <gpu> <datasets> <scenario> <cls_num_first_task> <num_tasks> [<results_dir>]
 ```
 
 where: 
@@ -36,25 +36,25 @@ where:
 You can train a baseline model of LUCIR by:
 
 ```
-bash ./script_cifar100_no_gradsearch.sh lucir 0 cifar100 conv 50 11
+bash ./script_cifar100_no_gridsearch.sh lucir 0 cifar100 conv 50 11
 ```
 
 Train a model of LUCIR with 2stage method by:
 
 ```
-bash ./script_cifar100_no_gradsearch.sh lucir_2stage 0 cifar100 conv 50 11
+bash ./script_cifar100_no_gridsearch.sh lucir_2stage 0 cifar100 conv 50 11
 ```
 
 Train a model of LUCIR with 2stage method on shuffled long-tailed scenario by:
 
 ```
-bash ./script_cifar100_no_gradsearch.sh lucir_2stage 0 cifar100 lt 50 11
+bash ./script_cifar100_no_gridsearch.sh lucir_2stage 0 cifar100 lt 50 11
 ```
 
 Train a model of LUCIR with 2stage method on ordered long-tailed scenario by:
 
 ```
-bash ./script_cifar100_no_gradsearch.sh lucir_2stage 0 cifar100 ltio 50 11
+bash ./script_cifar100_no_gridsearch.sh lucir_2stage 0 cifar100 ltio 50 11
 ```
 
 Up to now, we implement 2stage methods to three methods (EEIL, LUCIR, PODNET). You can alse use other methods implemented in `./src/approaches`. Scenarios are generated in `./src/datasets/dataloader`
