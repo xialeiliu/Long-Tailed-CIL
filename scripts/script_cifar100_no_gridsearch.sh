@@ -35,7 +35,7 @@ do
     elif [ "$3" = "cifar100" ]; then
         PYTHONPATH=$SRC_DIR python3 -u $SRC_DIR/main_incremental.py --exp-name no_gs_fixd_${SEED} \
                 --datasets "$3_$4" --num-tasks $6 --network resnet32 --seed $SEED \
-                --nepochs 1 --batch-size 128 --results-path "$PROJECT_DIR/cifar100/$5base_$6tasks" \
+                --nepochs 160 --batch-size 128 --results-path "$PROJECT_DIR/cifar100/$5base_$6tasks" \
                 --approach $1 --gpu $2 --lr 0.1 --lr-factor 10 --momentum 0.9 \
                 --weight-decay 5e-4 \
                 --nc-first-task $5 \
