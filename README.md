@@ -10,7 +10,7 @@ This is the official PyTorch implementation of **Long-Tailed Class Incremental L
 ### Cifar100
 Download automaticly to `./data`.
 ### Imagenet
-Should be downloaded to `./data`.
+Should be downloaded to `./data`. And the subset list can be generated using the file `./subset.py`.
 
 ## Training
 
